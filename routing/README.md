@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+NEXT.JS
+here are the key take away from this folder . 
 
-## Getting Started
+basics
+1. git clone https
+2. cd directory
+3. git stauts
+4. git add .
+5. git commit -m ""
+6. git push 
+7. now we get Next.js in our folder by using => npx create-next-app@latest
+8. things get rendered which are written in app/page.tsx
+9. you have to delete cache when there is no error in code still things are not rendering
 
-First, run the development server:
+    PACKAGE.JSON
+   
+"scripts": {
+    "dev": "next dev", => to run the program
+    "build": "next build",    => to put in groduction 
+    "start": "next start",      =>to start in production 
+    "lint": "eslint"            => to know if there is any error in program
+  }, 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+  IMG IN NEXT.JS
+  1. get your image in pub;ic folder
+2. create img.tsx file in components
+3. in this in this import your image from public by giving it a new name , like import newname from "public/img.png"; 
+4. then also import Image from "next/image";
+5. then create a function of some other name , we will call this function in other tsx file like page.tsx once it is exported from img.tsx . 
+6. in function write <Image src={newname} />
+7. then go to page.tsx import the function from img.tsx
+8. write export default function home(){...... <functionname/> }
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   LINKS in next.js
+   so 1st we made a folder components , then we made header.tsx in it . in this we created a function lets say abcd . now this abcd function is imported in layout.tsx as import abcd from "@componenets/header"; and then write </abcd> before {children} . now at 1st as lauout gets seen at the browser , it will be header.tsx that will render .. 
