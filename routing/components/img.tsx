@@ -6,7 +6,7 @@ import Image from "next/image";
 function ImgPage() {
     return (
         <div className="relative screen "> 
-            <div className="absolute z-10" >
+            <div className="absolute " >
             <Image src={ProductImage} alt="Picture of the author" width={700} height={800} />
             </div>
             <div>
